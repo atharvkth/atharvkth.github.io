@@ -53,13 +53,13 @@ nav {
 }
 
 .disclaimer-btn:hover {
-    background-color: #777;
+    background-color: #444;
 }
 
 .back-btn {
     text-decoration: none;
     color: #fff;
-    background-color: #555;
+    background-color: #222;
     padding: 8px 16px;
     border-radius: 5px;
     font-size: 0.9rem;
@@ -69,7 +69,7 @@ nav {
 }
 
 .back-btn:hover {
-    background-color: #777;
+    background-color: #444;
 }
 
 .spotify-icon img {
