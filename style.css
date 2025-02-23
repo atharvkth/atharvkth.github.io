@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', 'Palatino Linotype', serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ddd;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #222;
+}
+
+body.dark-mode h1 {
+    color: #eee;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.disclaimer-btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #222;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+    display: inline-flex;
+    align-items: center;
+}
+
+.disclaimer-btn:hover {
+    background-color: #777;
+}
+
+.back-btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #555;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+    display: inline-flex;
+    align-items: center;
+}
+
+.back-btn:hover {
+    background-color: #777;
+}
+
+.spotify-icon img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s;
+    vertical-align: middle;
+}
+
+.spotify-icon:hover img {
+    transform: scale(1.1);
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.3s;
+    display: inline-flex;
+    align-items: center;
+    height: 32px;
+}
+
+.toggle-btn:hover {
+    transform: scale(1.1);
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.blog-posts {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.blog-posts article {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+body.dark-mode .blog-posts article {
+    background: #2a2a2a;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.blog-posts h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+body.dark-mode .blog-posts h2 {
+    color: #ccc;
+}
+
+.timestamp {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+body.dark-mode .timestamp {
+    color: #aaa;
+}
+
+.disclaimer-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+body.dark-mode .disclaimer-content {
+    background: #2a2a2a;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.qa {
+    margin-bottom: 40px; /* Increased spacing */
+}
+
+.qa h2 {
+    font-size: 1rem; /* Matches .qa p */
+    color: #444;
+    margin-bottom: 5px;
+}
+
+body.dark-mode .qa h2 {
+    color: #ccc;
+}
+
+.qa p {
+    font-size: 1rem; /* Same as before */
+    color: #666;
+}
+
+body.dark-mode .qa p {
+    color: #aaa;
+}
+
+/* i really hope it works on phones 🤞🏻 */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column; /* Stack title and nav */
+        align-items: flex-start;
+        margin-bottom: 20px; /* Less space on small screens */
+    }
+
+    nav {
+        margin-top: 10px; /* Space between title and nav */
+        gap: 10px; /* Tighter spacing */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Smaller title */
+    }
+
+    .disclaimer-btn, .back-btn {
+        padding: 6px 12px; /* Slightly smaller but still tappable */
+        font-size: 0.85rem;
+    }
+
+    .spotify-icon img {
+        width: 24px; /* Slightly smaller icon */
+        height: 24px;
+    }
+
+    .toggle-btn {
+        font-size: 1rem; /* Smaller emoji */
+        height: 28px;
+    }
+
+    .blog-posts article {
+        padding: 15px; /* Less padding for more text space */
+        margin-bottom: 15px;
+    }
+
+    .blog-posts h2 {
+        font-size: 1.25rem; /* Smaller post titles */
+    }
+
+    .disclaimer-content {
+        padding: 15px;
+    }
+
+    .qa {
+        margin-bottom: 30px; /* Slightly less spacing */
+    }
+}
